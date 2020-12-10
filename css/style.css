@@ -10,7 +10,7 @@ body {
     align-items: center;
     height: 100vh;
     background: #2C2C2C;
-    color: #565656;
+    color: #555;
 }
 
 .container {
@@ -26,11 +26,13 @@ body {
 
 .table {
     width: 100%;
-    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #555;
+    border-radius: 20px;
 }
 
 
-.table-wrapper:not(:last-child) {
+.table:not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -50,12 +52,7 @@ body {
 
 .table__cell,
 .table__heading {
-    border-bottom: 1px solid #565656;
-}
-
-.table-wrapper {
-    border-radius: 20px;
-    border: 1px solid #565656;
+    border-bottom: 1px solid #555;
 }
 
 .table__row:last-child .table__cell:not(:nth-child(n+3)) {
