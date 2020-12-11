@@ -54,7 +54,7 @@ body {
 .table__heading {
     width: 50%;
     border-bottom: 1px solid #555;
-    padding: 15px 20px;
+    padding: 0 20px;
 }
 
 .table__cell {
@@ -66,16 +66,15 @@ body {
 }
 
 .table__link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     color: #fff;
     text-decoration: none;
-    transform: translateX(0px);
     transition: 0.3s;
 }
 
 .table__link:hover {
     color: #199ffe;
-    transform: translateX(10px);
     transition: 0.3s;
 }
 
@@ -173,10 +172,59 @@ body {
     cursor: pointer;
 }
 
+.table-cell__img {
+    margin-right: 10px;
+}
 
-/*@media screen and (max-width: 480px){*/
-/*    .table__cell, .table__heading {*/
-/*        width: auto;*/
-/*    }*/
-/*}*/
+
+.table-heading__title_arrow::before {
+    content: none;
+}
+
+.table-heading__item_row {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.table-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    padding: 0 10px 0 15px;
+    border-radius: 5px;
+    background: #444;
+}
+
+.table-form__search {
+    background: #444444;
+    color: #7F7F7F;
+    border: 0;
+    height: 35px;
+    min-width: 44px;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.table-form__search:focus {
+    outline: #333;
+}
+
+.table-form__img {
+    max-width: 20px;
+}
+
+.table-form__search::placeholder {
+    font-size: 16px;
+    text-indent: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .table__cell, .table__heading {
+        width: auto;
+    }
+}
 

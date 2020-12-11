@@ -49,7 +49,9 @@
         <tr class="table__row">
             <th class="table__heading table-heading">
                 <div class="table-heading__item">
-                    <label for="file"><p class="table-heading__title">Name</p></label>
+                    <p class="table-heading__title">
+                        <label for="file">Name</label>
+                    </p>
                     <input class="table-heading__checkbox" id="file" name="name" type="checkbox" checked>
                 </div>
             </th>
@@ -103,10 +105,30 @@
             <th class="table__heading">
                 <p class="table-heading__title">Name</p>
             </th>
-            <th class="table__heading">Date</th>
+            <th class="table__heading table-heading">
+                <div class="table-heading__item table-heading__item_row">
+                    <p class="table-heading__title table-heading__title_arrow">Date</p>
+                    <form class="table__form table-form" action="">
+                        <img src="src/img/search-icon.png" alt="" class="table-form__img">
+                        <label for="search">
+                            <input class="table-form__search" type="search" name="search-area" id="search"
+                                   placeholder="Search">
+                        </label>
+                    </form>
+                </div>
+            </th>
+
         </tr>
         <tr class="table__row">
-            <td class="table__cell">File.pdf</td>
+            <td class="table__cell table-cell">
+                <div class="table-cell__item">
+                    <a href="src/file/JavaScript_для_Frontend.pdf" target="_blank" download="" class="table__link">
+                        <img src="src/img/download-folder.png" alt="download-folder"
+                             class="table-cell__img">
+                        File.pdf
+                    </a>
+                </div>
+            </td>
             <td class="table__cell">3 mins ago
                 <button class="table__button table-button">
                     <span class="table-button__dots"></span>
@@ -114,7 +136,15 @@
             </td>
         </tr>
         <tr class="table__row">
-            <td class="table__cell">File.pdf</td>
+            <td class="table__cell table-cell">
+                <div class="table-cell__item">
+                    <a href="src/file/JavaScript_для_Frontend.pdf" target="_blank" download="" class="table__link">
+                        <img src="src/img/download-folder.png" alt="download-folder"
+                             class="table-cell__img">
+                        File.pdf
+                    </a>
+                </div>
+            </td>
             <td class="table__cell">Yesterday
                 <button class="table__button table-button">
                     <span class="table-button__dots"></span>
@@ -122,7 +152,14 @@
             </td>
         </tr>
         <tr class="table__row">
-            <td class="table__cell">File.pdf</td>
+            <td class="table__cell table-cell">
+                <div class="table-cell__item">
+                    <a href="src/file/JavaScript_для_Frontend.pdf" target="_blank" download="" class="table__link">
+                        <img src="src/img/download-folder.png" alt="download-folder" class="table-cell__img">
+                        File.pdf
+                    </a>
+                </div>
+            </td>
             <td class="table__cell">June 1st, 2019
                 <button class="table__button table-button">
                     <span class="table-button__dots"></span>
