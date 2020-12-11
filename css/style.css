@@ -29,6 +29,7 @@ body {
     border-spacing: 0;
     border: 1px solid #555;
     border-radius: 20px;
+    background: #2F2F2F;
 }
 
 
@@ -56,6 +57,10 @@ body {
     padding: 15px 20px;
 }
 
+.table__cell {
+    position: relative;
+}
+
 .table__row:last-child .table__cell:not(:nth-child(n+3)) {
     border-bottom: 0;
 }
@@ -74,33 +79,104 @@ body {
     transition: 0.3s;
 }
 
-.table__heading:first-child {
+.table-heading__title {
     position: relative;
+    display: inline-block;
 }
 
-.table__heading:first-child::after {
+.table-heading__title::before {
     content: "";
     position: absolute;
-    left: 70px;
+    right: -25px;
     top: 50%;
     transform: translateY(-50%);
-    border-top: 8px solid #fff;
-    border-right: 8px solid transparent;
-    border-left: 8px solid transparent;
+    border-top: 6px solid #fff;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
 }
 
 
-.table__dots {
-    position: relative;
+.table-button {
+    background: none;
+    position: absolute;
+    width: 22px;
+    height: 5px;
+    border: 0;
+    cursor: pointer;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.table-button__dots {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
     width: 5px;
     height: 5px;
     border-radius: 100%;
     background: #fff;
     display: inline-block;
+    border: 0;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.table__button:focus {
+    outline: none;
+}
+
+.table-button__dots::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    border-radius: 100%;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+}
+
+.table-button__dots::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 0;
+    border-radius: 100%;
+    width: 5px;
+    height: 5px;
+    background: #fff;
 }
 
 
-.table__dots:not() {
-    background: #199ffe;
+.table-simple .table-button__dots {
+    background: #757575;
 }
+
+.table-simple .table-button__dots::after,
+.table-simple .table-button__dots::before {
+    background: #757575;
+}
+
+.table-heading__item,
+.table-cell__item {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+
+.table-heading__checkbox,
+.table-cell__checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/*@media screen and (max-width: 480px){*/
+/*    .table__cell, .table__heading {*/
+/*        width: auto;*/
+/*    }*/
+/*}*/
 
